@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import tests.utils_package.Driver;
 
+import static org.testng.Assert.assertEquals;
+
 public abstract class BasePage {
 
     protected WebDriver driver;
@@ -25,7 +27,8 @@ public abstract class BasePage {
         // isCurrentPage(); automatically checks if correct page. when we create objects
     }
 
-
-    }
+    public void isCurrentPage(){
+        assertEquals(driver.getTitle(),"");
+    }}
 
 
